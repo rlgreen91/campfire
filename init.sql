@@ -1,0 +1,2 @@
+CREATE USER campfire;
+ALTER USER campfire WITH SUPERUSER;
