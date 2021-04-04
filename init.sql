@@ -1,2 +1,2 @@
-CREATE USER campfire;
+CREATE USER campfire WITH PASSWORD 'storyteller';
 ALTER USER campfire WITH SUPERUSER;
