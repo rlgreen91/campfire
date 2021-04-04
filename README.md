@@ -72,7 +72,7 @@ You'll need to ensure that you have Postgres, NodeJS and Redis installed and run
 
 First, we'll create our database user using the `init.sql` in the following command:
 ```
-$ psql -f init.sql
+$ psql postgres -f init.sql
 ```
 
 Next, we'll run Bundler and Yarn to set up our dependencies:
