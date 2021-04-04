@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Another Publisher Wants to Join Campfire!</h1>
+    <p>
+      Another publisher is interested in joining Campfire and getting to know their readers!
+      A rep has reached out on behalf of:
+        <%= @company_name %><br>
+    </p>
+    <p>
+      You can contact <%= @company_name %> by reaching out to the person below, using the provided email and phone number (if available):
+        Contact Name: <%= @contact_name %><br>
+        Contact Email: <%= @contact_email %> <br>
+        Contact Phone Number: <%= @contact_phone.presence || 'No phone number provided' %>
+    </p>
+    <p>Have a great day!</p>
+  </body>
+</html>
