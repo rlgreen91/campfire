@@ -59,6 +59,11 @@ Next, you'll create and seed your database and run migrations on it with the fol
 $ docker-compose exec app bundle exec rails db:setup db:migrate db:seed
 ```
 
+Then, you'll install webpacker:
+```
+$ docker-compose exec app rails webpacker:install
+```
+
 Now you're all set!  Navigating to `localhost:3000` in your browser should lead you to the homepage.
 
 ## Setup - Local Only
@@ -70,6 +75,11 @@ You'll need to ensure that you have Postgres, NodeJS and Redis installed and run
 - [Node v14.16.0](https://nodejs.org/en/)
 - [Redis v5.0.7](https://redis.io/)
 
+Once you've installed Node, then you should install the [Yarn package manager](https://yarnpkg.com/):
+```
+$ npm install -g yarn
+```
+
 First, we'll create our database user using the `init.sql` in the following command:
 ```
 $ psql postgres -f init.sql
@@ -78,6 +88,11 @@ $ psql postgres -f init.sql
 Next, we'll run Bundler and Yarn to set up our dependencies:
 ```
 $ bundle install && yarn install
+```
+
+Then, you'll install and configure webpacker:
+```
+$ docker-compose exec app rails webpacker:install
 ```
 
 Then, you'll create and seed your database and run migrations on it with the following command:

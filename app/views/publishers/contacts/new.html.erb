@@ -1,0 +1,11 @@
+<% flash.each do |type, msg| %>
+  <div><%= msg %></div>
+<% end %>
+
+<h1>Submit Publisher and Contact Information</h1>
+
+<p>Are you a publishing house looking to join Campfire and get to know your readers?
+Before you join, drop a line to us so we can work with you to create your account, import your data,
+and take care of any questions you might have!  Companies that allow self-publishing are welcome.</p>
+
+<%= render 'form' %>
