@@ -1,5 +1,5 @@
 # Writing Better Forms
- 
+
 Forms are the unsung hero of a web app. Without them, most of our sites wouldn't have any data or even users. But we don't talk about forms that much, other than to say that building forms is hard. We want our forms to look nice and be useful, but sometimes that feels impossible. Join me for a refresher course on forms. We'll walk through creating three types of forms, from basic to advanced. Along the way I'll teach you some tips and tricks to create forms that delight users without frustrating your developers. And it's all vanilla Rails and JS as well - no extra DSL or libraries required.
 
 During the workshop, we'll be taking on the role of a full-stack developer at Campfire, a web app that makes it easy for people to start, join, and participate in book clubs.  As part of our work, we're tasked to build a basic contact form that representatives from publishing houses can use to indicate that they want to import their catalog into the app.  Upon submission, the data from the form will be used to populate an email sent to a co-worker at Campfire.
@@ -10,16 +10,16 @@ Writing Better Forms is originally presented as part of RailsConf 2021, on April
 
 ## Prerequisites
 
-As noted above, this workshop assumes that you have some basic experience with HTML, CSS, JS, Ruby and Rails.  Completing a beginner's tutorial that covers those topics should be enough for you to feel comfortable with what we'll discuss.  
+As noted above, this workshop assumes that you have some basic experience with HTML, CSS, JS, Ruby and Rails.  Completing a beginner's tutorial that covers those topics should be enough for you to feel comfortable with what we'll discuss.
 
-During the workshop, you should feel free to follow along by making changes to a locally running version of the codebase. While this isn't required, I highly recommend that you do so so that you can create your own working example of some of the best practices surrounding forms.  
+During the workshop, you should feel free to follow along by making changes to a locally running version of the codebase. While this isn't required, I highly recommend that you do so so that you can create your own working example of some of the best practices surrounding forms.
 
 I would encourage you to clone the codebase well in advance of the workshop and ensure that you are able to run the application, particularly if you choose to use the provided Dockerfile.  And although it is unlikely that there will be substantial changes in the last days prior to the workshop, I would also advise you to pull the latest version from Github the morning of the workshop as well.
 
 
 ## Getting Ready
 
-As stated above, you're encouraged to follow along during the workshop by making changes to a locally running version of the codebase.  You can choose to run the application locally within their system directly or by using the provided Dockerfile, as discussed in more detail below.  
+As stated above, you're encouraged to follow along during the workshop by making changes to a locally running version of the codebase.  You can choose to run the application locally within their system directly or by using the provided Dockerfile, as discussed in more detail below.
 
 ## Setup - Docker and Local
 Before installing and configuring the codebase, ensure that you have the following items installed on your computer (with links for more info):
@@ -38,6 +38,7 @@ Add the following values to the file:
 DATABASE_USER=campfire
 DATABASE_PASSWORD=password
 DATABASE_HOST=database
+DATABASE_NAME=campfire
 REDIS_HOST=redis
 ```
 
@@ -92,7 +93,7 @@ $ bundle install && yarn install
 
 Then, you'll install and configure webpacker:
 ```
-$ docker-compose exec app rails webpacker:install
+$ rails webpacker:install
 ```
 
 Then, you'll create and seed your database and run migrations on it with the following command:
